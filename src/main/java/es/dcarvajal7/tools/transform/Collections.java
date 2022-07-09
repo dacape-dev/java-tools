@@ -1,4 +1,4 @@
-package es.dcarvajal7.tools.cast;
+package es.dcarvajal7.tools.transform;
 
 import java.util.List;
 import java.util.function.Function;
