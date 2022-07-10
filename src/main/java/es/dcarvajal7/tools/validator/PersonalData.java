@@ -1,12 +1,14 @@
 package es.dcarvajal7.tools.validator;
 
-import java.util.regex.Pattern;
+import org.apache.commons.validator.routines.EmailValidator;
 
 public class PersonalData {
+
+    /**
+     * EmailValidator class to validate the email, which uses RFC 822 standards
+     */
     public static boolean isValidEmail(String email){
-        final String REGEX = "^(?:[^.\\s])\\S*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
-        return Pattern.compile(REGEX)
-                .matcher(email)
-                .matches();
+        return EmailValidator.getInstance()
+                .isValid(email);
     }
 }

@@ -24,12 +24,12 @@ class PersonalDataUnitTest {
 
     @Test
     public void whenEmail_thenReturnIsNotValidEmail2() {
-        assertThat(!PersonalData.isValidEmail(".test@test.com")).isFalse();
+        assertThat(!PersonalData.isValidEmail("tesççt@test.com")).isFalse();
     }
 
     @Test
     public void whenEmail_thenReturnIsNotValidEmail3() {
-        assertThat(!PersonalData.isValidEmail("test@test..com")).isFalse();
+        assertThat(!PersonalData.isValidEmail("tes=t@test.com")).isFalse();
     }
 
 }
