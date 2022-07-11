@@ -1,6 +1,5 @@
 package es.dcarvajal7.tools;
 
-import es.dcarvajal7.tools.UserValidator;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -19,17 +18,17 @@ class UserValidatorUnitTest {
     }
 
     @Test
-    public void whenEmail_thenReturnIsNotValidEmail1() {
+    public void whenEmail_thenReturnIsValidEmailKO() {
         assertThat(UserValidator.isValidEmail("testtest.com")).isFalse();
     }
 
     @Test
-    public void whenEmail_thenReturnIsNotValidEmail2() {
+    public void whenEmail_thenReturnIsValidEmailKO2() {
         assertThat(!UserValidator.isValidEmail("tesççt@test.com")).isFalse();
     }
 
     @Test
-    public void whenEmail_thenReturnIsNotValidEmail3() {
+    public void whenEmail_thenReturnIsValidEmailKO3() {
         assertThat(!UserValidator.isValidEmail("tes=t@test.com")).isFalse();
     }
 
