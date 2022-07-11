@@ -1,12 +1,13 @@
-package es.dcarvajal7.tools.validator;
+package es.dcarvajal7.tools;
 
+import es.dcarvajal7.tools.UserValidator;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-class PersonalDataUnitTest {
+class UserValidatorUnitTest {
 
     @Test
     void contextLoads() {
@@ -14,22 +15,22 @@ class PersonalDataUnitTest {
 
     @Test
     public void whenEmail_thenReturnIsValidEmail() {
-        assertThat(PersonalData.isValidEmail("test@test.com")).isTrue();
+        assertThat(UserValidator.isValidEmail("test@test.com")).isTrue();
     }
 
     @Test
     public void whenEmail_thenReturnIsNotValidEmail1() {
-        assertThat(PersonalData.isValidEmail("testtest.com")).isFalse();
+        assertThat(UserValidator.isValidEmail("testtest.com")).isFalse();
     }
 
     @Test
     public void whenEmail_thenReturnIsNotValidEmail2() {
-        assertThat(!PersonalData.isValidEmail("tesççt@test.com")).isFalse();
+        assertThat(!UserValidator.isValidEmail("tesççt@test.com")).isFalse();
     }
 
     @Test
     public void whenEmail_thenReturnIsNotValidEmail3() {
-        assertThat(!PersonalData.isValidEmail("tes=t@test.com")).isFalse();
+        assertThat(!UserValidator.isValidEmail("tes=t@test.com")).isFalse();
     }
 
 }

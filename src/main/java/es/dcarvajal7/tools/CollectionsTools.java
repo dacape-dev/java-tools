@@ -1,10 +1,10 @@
-package es.dcarvajal7.tools.transform;
+package es.dcarvajal7.tools;
 
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Collections {
+public class CollectionsTools {
 
     /**
      * Generic method to convert list of T to list of T

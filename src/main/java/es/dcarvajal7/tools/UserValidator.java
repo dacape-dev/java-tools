@@ -1,8 +1,8 @@
-package es.dcarvajal7.tools.validator;
+package es.dcarvajal7.tools;
 
 import org.apache.commons.validator.routines.EmailValidator;
 
-public class PersonalData {
+public class UserValidator {
 
     /**
      * EmailValidator class to validate the email, which uses RFC 822 standards
