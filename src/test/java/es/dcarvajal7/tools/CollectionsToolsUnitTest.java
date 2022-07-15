@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 @SpringBootTest
@@ -76,5 +77,26 @@ class CollectionsToolsUnitTest {
         List<String> stringList2 = Arrays.asList("4", "5");
         List<String> resultList = CollectionsTools.merge(stringList, stringList2);
         assertThat(resultList).isNotEqualTo(Arrays.asList("-1", "3", "3", "4", "5"));
+    }
+
+    @Test
+    public void whenListOfNoSortedString_thenReturnSortedListOK() {
+        List<String> stringList = Arrays.asList("5", "2", "3");
+        List<String> resultList = CollectionsTools.sort(stringList, Comparator.comparing(String::toString));
+        assertThat(resultList).isEqualTo(Arrays.asList("2", "3", "5"));
+    }
+
+    @Test
+    public void whenListOfNoSortedLong_thenReturnSortedListOK() {
+        List<Long> longList = Arrays.asList(5L, 2L, 3L);
+        List<Long> resultList = CollectionsTools.sort(longList, Comparator.comparing(Long::valueOf));
+        assertThat(resultList).isEqualTo(Arrays.asList(2L, 3L, 5L));
+    }
+
+    @Test
+    public void whenListOfNoSortedString_thenReturnSortedListKO() {
+        List<String> stringList = Arrays.asList("5", "2", "3");
+        List<String> resultList = CollectionsTools.sort(stringList, Comparator.comparing(String::toString));
+        assertThat(resultList).isNotEqualTo(Arrays.asList("2", "8", "5"));
     }
 }
