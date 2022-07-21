@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -98,5 +99,17 @@ class CollectionsToolsUnitTest {
         List<String> stringList = Arrays.asList("5", "2", "3");
         List<String> resultList = CollectionsTools.sort(stringList, Comparator.comparing(String::toString));
         assertThat(resultList).isNotEqualTo(Arrays.asList("2", "8", "5"));
+    }
+
+    @Test
+    public void whenNullList_thenReturnEmptyListOK1() {
+        List<String> resultList = CollectionsTools.sort(null, Comparator.comparing(String::toString));
+        assertThat(resultList).isEqualTo(Collections.emptyList());
+    }
+
+    @Test
+    public void whenNullList_thenReturnEmptyListOK2() {
+        List<String> resultList = CollectionsTools.validate(null);
+        assertThat(resultList).isEqualTo(Collections.emptyList());
     }
 }
