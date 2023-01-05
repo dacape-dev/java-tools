@@ -1,4 +1,8 @@
-# java-tools
+# 🛠️ java-tools
+
+## 📖 Description
+
+java-tools is a collection of tools that I use in my projects and that I find very useful for the development of Java applications.
 
 ## 🚀 Build jar
 You can compile the project and include it in your own to use
