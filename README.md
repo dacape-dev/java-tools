@@ -1,6 +1,6 @@
 # java-tools
 
-## maven
+## 🚀 maven
 
 ```
 <dependency>
@@ -9,3 +9,8 @@
   <version>{{version}}</version>
 </dependency>
 ```
+
+## 📦 packages
+
+https://github.com/dacape-dev?tab=packages&repo_name=java-tools
+
