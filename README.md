@@ -24,6 +24,7 @@ https://docs.github.com/en/packages/working-with-a-github-packages-registry/work
 ```
 
 ## 📦 package
+To see the generated package on GitHub follow this link:
 
 https://github.com/dacape-dev?tab=packages&repo_name=java-tools
 
